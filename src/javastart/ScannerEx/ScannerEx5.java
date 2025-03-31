@@ -1,4 +1,4 @@
-package ScannerEx;
+package javastart.ScannerEx;
 
 public class ScannerEx5 {
     public static void main(String[] args) {

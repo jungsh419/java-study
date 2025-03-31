@@ -1,4 +1,4 @@
-package ScannerEx;
+package javastart.ScannerEx;
 import java.util.Scanner;
 public class ScannerEx3 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package loop;
+package javastart.loop;
 
 public class NestedEx1 {
 

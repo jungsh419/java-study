@@ -1,6 +1,5 @@
-package array;
+package javastart.array;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class ArrayEx6 {

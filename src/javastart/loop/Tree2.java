@@ -1,4 +1,4 @@
-package loop;
+package javastart.loop;
 
 public class Tree2 {
         public static void main(String[] args) {

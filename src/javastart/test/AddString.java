@@ -1,4 +1,4 @@
-package test;
+package javastart.test;
 
 public class AddString {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package if_else;
+package javastart.if_else;
 
 public class GradeSwitchEx {
     public static void main(String[] args) {

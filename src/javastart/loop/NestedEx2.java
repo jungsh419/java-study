@@ -1,6 +1,4 @@
-package loop;
-
-import java.sql.SQLOutput;
+package javastart.loop;
 
 public class NestedEx2 {
 

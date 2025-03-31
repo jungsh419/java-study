@@ -1,9 +1,7 @@
-package javabasic.Class;
+package javabasic.Class2;
 
-public class ProductOrder {
+public class ProductOrder2 {
     String productName;
     int price;
     int quantity;
-
-
 }

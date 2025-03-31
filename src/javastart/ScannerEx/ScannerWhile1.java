@@ -1,5 +1,4 @@
-package ScannerEx;
-import java.nio.Buffer;
+package javastart.ScannerEx;
 import java.util.Scanner;
 public class ScannerWhile1 {
     public static void main(String[] args) {
