@@ -1,49 +1,44 @@
 package javaMid1.nested.nested.test;
 
-
-
 public class Library {
-    private Book[] Books;
-    private int count;
 
-    public Library(int count)
+    private Book[] books;
+    private int count = 0;
+    public Library(int bookCount)
     {
-        Books= new Book[count];
-        this.count = 0;
-
+        books = new Book[bookCount];
     }
-
-    public class Book
+    public void addBook(String bName, String bAuthor)
     {
-        private String bookName;
-        private String author;
-        Book(String bookName,String author)
+        if(count<books.length)
         {
-            this.bookName = bookName;
-            this.author = author;
-        }
-
-    }
-
-
-    public void addBook(String bookName,String author) {
-        if(Books.length <= count)
-        {
-            System.out.println("도서관 꽉참");
-        }
-        else {
-            Book book = new Book(bookName, author);
-            Books[count] = book;
+            Book book = new Book(bName,bAuthor);
+            books[count] = book;
             count++;
+
+        }
+        else
+        {
+            System.out.println("도서관이 꽉참");
         }
     }
-
     public void showBooks()
     {
-        for(Book book: Books)
+        System.out.println("== 책 목록 출력 ==");
+        for(Book book : books)
         {
-            System.out.println("제목 : "+ book.bookName + " 저자 : "+ book.author);
+            System.out.println(book.bookName + ", "+ book.author);
 
+        }
+    }
+    private class Book
+    {
+        private String bookName;
+        private   String author;
+
+        private Book(String bookName, String author) {
+            this.bookName = bookName;
+            this.author = author;
         }
     }
 
