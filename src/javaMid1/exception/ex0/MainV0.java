@@ -1,6 +1,5 @@
 package javaMid1.exception.ex0;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class MainV0 {
