@@ -1,0 +1,9 @@
+package javaMid2.genegic.test.exam;
+
+public class UnitUtil{
+    public static <T extends Biounit> T maxHp(T t1, T t2)
+    {
+
+        return t1.getHp()>t2.getHp() ? t1 : t2;
+    }
+}
