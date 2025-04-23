@@ -29,7 +29,6 @@ public class WildCard {
 
 
 
-
     static <T extends Animal> T printAndReturnGeneric(Box<T> box)
     {
         T t =box.getValue();
@@ -43,5 +42,6 @@ public class WildCard {
         System.out.println("이름 :"+animal.getName());
         return animal;
     }
+
 
 }
