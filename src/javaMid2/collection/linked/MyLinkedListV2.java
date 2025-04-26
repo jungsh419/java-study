@@ -1,4 +1,4 @@
-package javaMid2.collection.link;
+package javaMid2.collection.linked;
 
 public class MyLinkedListV2 {
     private Node first;
@@ -16,6 +16,7 @@ public class MyLinkedListV2 {
             Node lastNode = getLastNode();
             lastNode.next = newNode;
         }
+        size++;
     }
 
     private Node getLastNode() {

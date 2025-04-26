@@ -1,19 +1,18 @@
 package javaMid2.collection.array;
 
-import javax.crypto.interfaces.PBEKey;
 import java.util.Arrays;
 
-public class MyArrayListV1 {
+public class MyArrayListV2 {
     private static final int DEFAULT_CAPACITY =5;
 
     private Object[] elementData;
     private int size = 0;
 
-    public MyArrayListV1()
+    public MyArrayListV2()
     {
         elementData = new Object[DEFAULT_CAPACITY];
     }
-    public MyArrayListV1(int initialCapacity)
+    public MyArrayListV2(int initialCapacity)
     {
         elementData = new Object[initialCapacity];
     }
@@ -22,10 +21,33 @@ public class MyArrayListV1 {
         return size;
     }
     public void add(Object e)
-    {
+    {   // 코드 추가
+        if(size == elementData.length)
+        {
+            grow();
+        }
         elementData[size] = e;
         size++;
     }
+    // 코드 추가
+    private void grow() {
+        int oldCapacity = elementData.length;
+        int newCapacity = oldCapacity*2;
+        // 배열을 새로 만들고, 기존 배열을 새로운 배열에 복사
+        //  == 1 ==
+//        Object[] newArr = new Object[newCapacity];
+//        for (int i = 0; i < elementData.length; i++) {
+//            newArr[i] = elementData[i];
+//        }
+
+        // == 2 ==    , ==1== 방식을 한줄로
+//        Object[] newArr = Arrays.copyOf(elementData,newCapacity);
+//        elementData = newArr; // 기존 변수에 새로운 배열의 참조값을 담음
+
+        // == 3 ==
+        elementData = Arrays.copyOf(elementData,newCapacity);
+    }
+
     public Object get(int index)
     {
         return elementData[index];

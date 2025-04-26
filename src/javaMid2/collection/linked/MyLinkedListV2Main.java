@@ -1,4 +1,4 @@
-package javaMid2.collection.link;
+package javaMid2.collection.linked;
 
 public class MyLinkedListV2Main {
     public static void main(String[] args) {

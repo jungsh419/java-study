@@ -1,25 +1,27 @@
-package javaMid2.collection.array;
+package javaMid2.collection.list;
 
 import java.util.Arrays;
 
-public class MyArrayListV4<E> {
+public class MyArrayList<E> implements MyList<E>{
     private static final int DEFAULT_CAPACITY =5;
 
     private Object[] elementData;
     private int size = 0;
 
-    public MyArrayListV4()
+    public MyArrayList()
     {
         elementData = new Object[DEFAULT_CAPACITY];
     }
-    public MyArrayListV4(int initialCapacity)
+    public MyArrayList(int initialCapacity)
     {
         elementData = new Object[initialCapacity];
     }
+    @Override
     public int size()
     {
         return size;
     }
+    @Override
     public void add(E e)
     {   // 코드 추가
         if(size == elementData.length)
@@ -29,6 +31,7 @@ public class MyArrayListV4<E> {
         elementData[size] = e;
         size++;
     }
+    @Override
     public void add(int index, E e)
     {
         if(size == elementData.length)
@@ -48,7 +51,7 @@ public class MyArrayListV4<E> {
         }
 
     }
-
+    @Override
     public E remove(int index)
     {
         E object = get(index);
@@ -72,19 +75,22 @@ public class MyArrayListV4<E> {
         int newCapacity = oldCapacity*2;
         elementData = Arrays.copyOf(elementData,newCapacity);
     }
-
+    @Override
     @SuppressWarnings("unchecked")
     public E get(int index)
     {
         return (E)elementData[index];
     }
 
+    @Override
     public E set(int index, E element)
     {
         E oldValue = get(index);
         elementData[index] = element;
         return oldValue;
     }
+
+    @Override
     public int indexOf(Object o)
     {
         for(int i=0; i<size;i++)
@@ -94,6 +100,7 @@ public class MyArrayListV4<E> {
         }
         return -1;
     }
+
     @Override
     public String toString()
     {

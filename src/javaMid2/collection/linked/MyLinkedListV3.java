@@ -1,9 +1,8 @@
-package javaMid2.collection.list;
+package javaMid2.collection.linked;
 
-public class MyLinkedList<E> implements MyList<E>{
+public class MyLinkedListV3<E> {
     private Node<E> first;
     private int size = 0;
-    @Override
     public void add(E o)
     {
         Node<E> newNode = new Node<E>(o);
@@ -25,7 +24,6 @@ public class MyLinkedList<E> implements MyList<E>{
         return x;
     }
     //코드 추가
-    @Override
     public void add(int index, E e) {
         Node<E> newNode = new Node<>(e);
         if (index == 0) {
@@ -38,14 +36,12 @@ public class MyLinkedList<E> implements MyList<E>{
         }
         size++;
     }
-    @Override
     public E set(int index, E element) {
         Node<E> x = getNode(index);
         E oldValue = x.item;
         x.item = element;
         return oldValue;
     }
-    @Override
     public E remove(int index) {
         Node<E> removeNode = getNode(index);
         E removedItem = removeNode.item;
@@ -60,7 +56,7 @@ public class MyLinkedList<E> implements MyList<E>{
         size--;
         return removedItem;
     }
-    @Override
+
     public E get(int index) {
         Node<E> node = getNode(index);
         return node.item;
@@ -73,7 +69,6 @@ public class MyLinkedList<E> implements MyList<E>{
         }
         return x;
     }
-    @Override
     public int indexOf(E o) {
         int index = 0;
         for (Node<E> x = first; x != null; x = x.next) {
@@ -83,7 +78,6 @@ public class MyLinkedList<E> implements MyList<E>{
         }
         return -1;
     }
-    @Override
     public int size() {
         return size;
     }
@@ -94,35 +88,5 @@ public class MyLinkedList<E> implements MyList<E>{
                 "first=" + first +
                 ", size=" + size +
                 '}';
-    }
-
-
-    private static class Node<E> {
-        E item;
-        Node<E> next;
-
-        public Node(E item)
-        {
-            this.item = item;
-        }
-
-        @Override
-        public String toString()
-        {
-            StringBuilder sb = new StringBuilder();
-            Node<E> temp = this;
-            sb.append("[");
-            while(temp != null)
-            {
-                sb.append(temp.item);
-                if(temp.next != null) {
-                    sb.append("->");
-                }
-                temp = temp.next;
-            }
-            sb.append("]");
-            return sb.toString();
-        }
-
     }
 }

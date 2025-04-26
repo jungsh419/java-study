@@ -1,6 +1,6 @@
 package javaMid2.collection.array;
 
-public class MyArratListV3BadMain {
+public class MyArrayListV3BadMain {
     public static void main(String[] args) {
 
         MyArrayListV3 list = new MyArrayListV3();

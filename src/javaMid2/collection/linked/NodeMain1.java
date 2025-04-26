@@ -1,4 +1,4 @@
-package javaMid2.collection.link;
+package javaMid2.collection.linked;
 
 public class NodeMain1 {
     public static void main(String[] args) {
@@ -6,7 +6,6 @@ public class NodeMain1 {
         Node first = new Node("A");
         first.next = new Node("B");
         first.next.next = new Node("C");
-
         System.out.println("모든 노드 탐색");
         Node x = first;
         while(x != null)
@@ -14,7 +13,6 @@ public class NodeMain1 {
             System.out.println(x.item);
             x = x.next;
         }
-
         System.out.println("연결된 노드 확인");
         System.out.println(first);
 

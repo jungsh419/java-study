@@ -2,17 +2,17 @@ package javaMid2.collection.array;
 
 import java.util.Arrays;
 
-public class MyArrayListV3 {
+public class MyArrayListV4<E> {
     private static final int DEFAULT_CAPACITY =5;
 
     private Object[] elementData;
     private int size = 0;
 
-    public MyArrayListV3()
+    public MyArrayListV4()
     {
         elementData = new Object[DEFAULT_CAPACITY];
     }
-    public MyArrayListV3(int initialCapacity)
+    public MyArrayListV4(int initialCapacity)
     {
         elementData = new Object[initialCapacity];
     }
@@ -20,7 +20,7 @@ public class MyArrayListV3 {
     {
         return size;
     }
-    public void add(Object e)
+    public void add(E e)
     {   // 코드 추가
         if(size == elementData.length)
         {
@@ -29,7 +29,7 @@ public class MyArrayListV3 {
         elementData[size] = e;
         size++;
     }
-    public void add(int index, Object e)
+    public void add(int index, E e)
     {
         if(size == elementData.length)
         {
@@ -49,9 +49,9 @@ public class MyArrayListV3 {
 
     }
 
-    public Object remove(int index)
+    public E remove(int index)
     {
-        Object object = get(index);
+        E object = get(index);
         shiftLeftFrom(index);
 
         size --;
@@ -73,14 +73,15 @@ public class MyArrayListV3 {
         elementData = Arrays.copyOf(elementData,newCapacity);
     }
 
-    public Object get(int index)
+    @SuppressWarnings("unchecked")
+    public E get(int index)
     {
-        return elementData[index];
+        return (E)elementData[index];
     }
 
-    public Object set(int index, Object element)
+    public E set(int index, E element)
     {
-        Object oldValue = get(index);
+        E oldValue = get(index);
         elementData[index] = element;
         return oldValue;
     }
