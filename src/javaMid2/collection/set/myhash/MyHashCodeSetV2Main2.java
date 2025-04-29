@@ -1,4 +1,4 @@
-package javaMid2.collection.set;
+package javaMid2.collection.set.myhash;
 
 import javaMid2.collection.set.member.Member;
 

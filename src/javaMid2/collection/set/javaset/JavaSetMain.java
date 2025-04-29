@@ -10,6 +10,8 @@ public class JavaSetMain {
         run(hashSet);
         run(linkedSet);
         run(treeSet);
+
+
     }
 
     private static void run(Set<String> set)

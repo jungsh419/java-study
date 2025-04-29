@@ -1,4 +1,4 @@
-package javaMid2.collection.set;
+package javaMid2.collection.set.myhash;
 
 public class MyHashCodeSetV2Main1 {
     public static void main(String[] args) {

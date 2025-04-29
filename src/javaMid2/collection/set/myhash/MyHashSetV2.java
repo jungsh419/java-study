@@ -1,4 +1,4 @@
-package javaMid2.collection.set;
+package javaMid2.collection.set.myhash;
 
 import java.util.Arrays;
 import java.util.LinkedList;

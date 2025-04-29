@@ -1,6 +1,6 @@
 package javaMid2.collection.set.member;
 
-import javaMid2.collection.set.MyHashSetV2;
+import javaMid2.collection.set.myhash.MyHashSetV2;
 
 public class HashAndEqualsMain2 {
     public static void main(String[] args) {

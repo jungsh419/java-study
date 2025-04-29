@@ -11,6 +11,7 @@ public class ex2 {
         Scanner sc = new Scanner(System.in);
         List<Integer> nums = new ArrayList<>();
         System.out.println("숫자를 입력하시오");
+
         while(true) {
 
             int intValue = sc.nextInt();
