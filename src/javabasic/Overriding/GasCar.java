@@ -1,4 +1,4 @@
-package Overriding;
+package javabasic.Overriding;
 
 public class GasCar extends Car{
 
