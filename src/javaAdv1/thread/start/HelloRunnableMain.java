@@ -1,4 +1,4 @@
-package thread.start;
+package javaAdv1.thread.start;
 
 public class HelloRunnableMain {
     public static void main(String[] args) {

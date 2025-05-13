@@ -1,4 +1,4 @@
-package thread.control;
+package javaAdv1.thread.control;
 
 import static util.MyLogger.log;
 

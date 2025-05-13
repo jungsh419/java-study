@@ -1,6 +1,6 @@
-package thread.control;
+package javaAdv1.thread.control;
 
-import thread.start.HelloRunnable;
+import javaAdv1.thread.start.HelloRunnable;
 
 import static util.MyLogger.log;
 

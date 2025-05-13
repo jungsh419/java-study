@@ -1,6 +1,6 @@
-package thread.start;
+package javaAdv1.thread.start;
 
-public class BadThreadMain {
+public class HelloThreadMain {
     public static void main(String[] args) {
 
         Thread thread = Thread.currentThread();
@@ -10,8 +10,8 @@ public class BadThreadMain {
 
         System.out.println(thread.getName() + ": start() 호출전");
 
-        helloThread.run();
-        //helloThread.start(); // run 직접 실행 직접 실행하게되면 main 스레드에서 메서드를 실행함
+        //helloThread.run(); run 말고 start 호출
+        helloThread.start();
 
         System.out.println(thread.getName() + ": start() 호출후");
 
