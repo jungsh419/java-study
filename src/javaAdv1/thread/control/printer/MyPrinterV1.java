@@ -24,7 +24,7 @@ public class MyPrinterV1 {
             if(input.equals("q") )
             {
                 printer.work = false;
-
+                break;
             }
             printer.addJob(input);
         }
@@ -40,7 +40,7 @@ public class MyPrinterV1 {
         public void run() {
 
             while (work)
-            {
+                     {
                 if(jobQueue.isEmpty())
                 {
                     continue;

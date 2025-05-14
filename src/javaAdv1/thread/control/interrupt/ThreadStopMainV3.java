@@ -17,15 +17,11 @@ public class ThreadStopMainV3 {
 
     }
     static class MyTask implements Runnable{
-
-
-
         @Override
         public void run() {
 
             while (!Thread.currentThread().isInterrupted()) {
                 log("작업 중");
-
             }
 
             log("work 스레드 인터럽트 상태2 = "+ Thread.currentThread().isInterrupted());

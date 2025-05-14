@@ -17,9 +17,6 @@ public class ThreadStopMainV2 {
 
     }
     static class MyTask implements Runnable{
-
-
-
         @Override
         public void run() {
             try {
