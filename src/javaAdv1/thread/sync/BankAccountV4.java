@@ -39,10 +39,7 @@ public class BankAccountV4 implements BankAccount {
             // == 임계 영역 종료 ==
         }finally {
             lock.unlock();
-
         }
-
-
         log("[거래 종료]");
         return true;
     }

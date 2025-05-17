@@ -17,7 +17,6 @@ public class BoundedQueueV3 implements BoundedQueue{
 
     @Override
     public synchronized void put(String data) {
-
         while(queue.size() == max)
         {
             log("[put] 큐가 가득 참 생산자 대기 ");
@@ -28,12 +27,10 @@ public class BoundedQueueV3 implements BoundedQueue{
                 throw new RuntimeException(e);
             }
         }
-
         queue.offer(data);
         log("[put] 생산자 데이터 저장, notify()호출");
         notify(); //대기 스레드, WAIT -> BLOCKED
     }
-
     @Override
     public synchronized String take() {
        while(queue.isEmpty())

@@ -8,16 +8,12 @@ import static util.MyLogger.log;
 import static util.ThreadUtils.sleep;
 
 public class BankAccountV6 implements BankAccount {
-
     private int balance;
-
     private final Lock lock = new ReentrantLock();
-
 
     public BankAccountV6(int initialBalance) {
         this.balance = initialBalance;
     }
-
     @Override
     public boolean withdraw(int amount) {
        log("[거래 시작] " + getClass().getSimpleName());
@@ -31,7 +27,6 @@ public class BankAccountV6 implements BankAccount {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
         try {
             // == 임계 영역 시작 ==
             log("[검증 시작] 출금액: "+ amount+", 잔액:"+ balance );
@@ -48,8 +43,6 @@ public class BankAccountV6 implements BankAccount {
         }finally {
             lock.unlock();
         }
-
-
         log("[거래 종료]");
         return true;
     }

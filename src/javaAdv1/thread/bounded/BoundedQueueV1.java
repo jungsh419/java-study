@@ -23,15 +23,12 @@ public class BoundedQueueV1 implements BoundedQueue{
             return;
         }
         queue.offer(data);
-
     }
-
     @Override
     public synchronized String take() {
        if(queue.isEmpty())
        {
            return null;
-
        }
        return queue.poll();
     }

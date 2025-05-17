@@ -23,11 +23,8 @@ public class BoundedQueueV2 implements BoundedQueue{
             log("[put] 큐가 가득 참 생산자 대기 ");
             sleep(1000);
         }
-
         queue.offer(data);
-
     }
-
     @Override
     public synchronized String take() {
        while(queue.isEmpty())

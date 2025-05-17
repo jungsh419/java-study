@@ -16,15 +16,10 @@ public class LockSupportMainV2 {
         sleep(100);
         log("Thread-1 state: "+thread1.getState());
 
-
-
-
-
     }
 
     static class ParkTest implements Runnable
     {
-
         @Override
         public void run() {
             log("park 시작");

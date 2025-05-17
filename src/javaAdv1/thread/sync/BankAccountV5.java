@@ -7,16 +7,11 @@ import static util.MyLogger.log;
 import static util.ThreadUtils.sleep;
 
 public class BankAccountV5 implements BankAccount {
-
     private int balance;
-
     private final Lock lock = new ReentrantLock();
-
-
     public BankAccountV5(int initialBalance) {
         this.balance = initialBalance;
     }
-
     @Override
     public boolean withdraw(int amount) {
        log("[거래 시작] " + getClass().getSimpleName());
