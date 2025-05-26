@@ -17,7 +17,6 @@ public class SpinLock {
         }
         log("락 획득 완료");
     }
-
     public void unLock()
     {
         lock.set(false);

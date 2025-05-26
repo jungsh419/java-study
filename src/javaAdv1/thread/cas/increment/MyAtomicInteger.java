@@ -5,8 +5,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class MyAtomicInteger implements IncrementInteger{
 
     AtomicInteger atomicInteger = new AtomicInteger(0);
-
-
     @Override
     public void increment() {
         atomicInteger.incrementAndGet();
